@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-
+import { Component, Input} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule],
+  imports: [MatSidenavModule, MatButtonModule, MatSidenavModule, MatButtonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
 
-export class SidebarComponent { }
+export class SidebarComponent {
+  @Input() isExpanded: boolean = true;
+
+  actionSidebar(){
+      !this.isExpanded;
+  }
+}

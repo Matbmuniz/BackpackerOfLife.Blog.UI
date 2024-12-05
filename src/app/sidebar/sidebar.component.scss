@@ -1,13 +1,42 @@
 .app-sidenav {
   padding: 20px;
-  width: 12%;
+  width: 2%;
   height: 100%;
   visibility: visible;
   background-image: url(../../../src/assets/img/teste.jpg);
   background-size: cover;
   background-position: center;
-
+  transition: width 0.5s;
+  justify-content: right;
+  
   p {
     color: #000000;
+  }
+
+  span {
+    color: #000000;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hidde-sidebar {
+  width: 10%;
+  transition: width 0.5s;
+  justify-content: right;
+}
+
+.icon-interaction {
+  cursor: pointer;
+  justify-content: right;
+}
+
+.sidebar-title{
+  color: #000000;
+  transition: width 0.5s;
+
+  span::after {
+    visibility: visible;
   }
 }
